@@ -1,3 +1,26 @@
 * {
   box-sizing: border-box;
 }
+#main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90vh;
+}
+.row-container {
+  display: flex;
+
+  height: 30vh;
+
+  width: 100%;
+}
+.grid-element {
+  display: flex;
+  background-color: blue;
+  border: 4px solid;
+  width: 100%;
+  height: 100%;
+}
+.grid-element:hover {
+  background-color: beige;
+}
