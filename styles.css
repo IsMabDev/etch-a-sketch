@@ -27,5 +27,5 @@ body {
   outline: 0.1em solid;
 }
 .grid-element:hover {
-  background-color: beige;
+  background-color: #f5f5dc;
 }
