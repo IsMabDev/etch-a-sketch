@@ -45,15 +45,15 @@ function createGrid() {
     container.appendChild(rowElement);
     changeBackgroundToRed();
   }
+}
 
-  //This function is to change the background when hovered
-  function changeBackgroundToRed() {
-    const gridElement = document.querySelectorAll(".grid-element");
+//This function is to change the background when hovered
+function changeBackgroundToRed() {
+  const gridElement = document.querySelectorAll(".grid-element");
 
-    gridElement.forEach((item) => {
-      item.addEventListener("mouseover", (event) => {
-        item.style.backgroundColor = "red";
-      });
+  gridElement.forEach((item) => {
+    item.addEventListener("mouseover", (event) => {
+      item.style.backgroundColor = "red";
     });
-  }
+  });
 }
