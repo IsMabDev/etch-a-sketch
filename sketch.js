@@ -1,7 +1,9 @@
 console.log("this is sketch.js script");
-let isGrid = false;
+//The initial grid is 50 length
+let gridLength = 50;
+createGrid();
+//adding an event to the button to change the grid length
 const button = document.querySelector("#gridNumber");
-const buttonParentNode = button.parentElement;
 
 button.addEventListener("click", () => {
   gridLength = prompt(`Enter The grid length 
@@ -13,16 +15,19 @@ button.addEventListener("click", () => {
     gridLength > 0 &&
     gridLength <= 100
   ) {
-    if (isGrid === true) {
-      resetGrid();
-    }
+    resetGrid();
+
     createGrid();
   }
 });
+
+//This function remove the container of the grid
 function resetGrid() {
   const containerToDelete = document.querySelector("#main-container");
   containerToDelete.remove();
 }
+
+//This function create a grid depending on the gridLength
 function createGrid() {
   const body = document.querySelector("body");
   const container = document.createElement("div");
@@ -38,9 +43,10 @@ function createGrid() {
       rowElement.appendChild(colElement);
     }
     container.appendChild(rowElement);
-    isGrid = true;
     changeBackgroundToRed();
   }
+
+  //This function is to change the background when hovered
   function changeBackgroundToRed() {
     const gridElement = document.querySelectorAll(".grid-element");
 
@@ -51,21 +57,3 @@ function createGrid() {
     });
   }
 }
-
-//   getComputedStyle(item).backgroundColor);
-//item.style.backgroundColor = "rgb(255, 0, 0)";
-// });
-// });
-// gridElement.forEach((item) => {
-//   let itemStyle = getComputedStyle(item);
-//   console.log(itemStyle.backgroundColor);
-// });
-// gridElement.forEach((item) => {
-//   addEventListener("mouseover", (item) => {
-//     let itemStyle = getComputedStyle(item);
-//     console.log(itemStyle.backgroundColor);
-//   });
-// });
-// let itemStyle = getComputedStyle(gridElement, ":hover");
-
-// console.log(itemStyle.backgroundColor);
