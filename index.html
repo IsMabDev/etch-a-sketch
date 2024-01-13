@@ -6,11 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etch a Sketch for TOP projects</title>
   <link rel="stylesheet" href="styles.css">
+
+
 </head>
 
 <body>
+  <div id="commandsContainer">
+    <button type="button" class="modern-button" id="gridNumber">Please choose a grid length</button>
+    <div id="colorChoice">
+      <label for="userDefaultColor">Choose the default color: <input type="color" id="userDefaultColor"
+          value="#ff0000" /></label>
+      <label for="userHoveredColor">Choose the color when hovered: <input type="color" id="userHoveredColor"
+          value="#ff0000" /></label>
+    </div>
 
-  <button type="button" id="gridNumber">Please choose a grid length</button>
+    <h3>Choose the behavior for your magic grid</h3>
+    <div id="behaviorButtons">
+      <button id="hoveredButton" class="modern-button" type="button">Change the color when hovered</button>
+      <button id="rainbowButton" class="modern-button" type="button">Make a magic rainbow</button>
+      <button id="darkerButton" class="modern-button" type="button">Make it darker</button>
+
+    </div>
+
+  </div>
+  <div id="gridContainer">
+    <div id="main-Container">
+    </div>
+    <div>
+      <h1>The magic Grid</h1>
+    </div>
+
+
+  </div>
 
 
   <script src="sketch.js"></script>
